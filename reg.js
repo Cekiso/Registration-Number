@@ -1,29 +1,29 @@
 
 
-function Reg(){
+function Reg(existingNamesAlready){
 
-    var regList = [];
-    var CAList = [];
-    var CJList =[];
-    var GPList =[];
-    var allList =[];
-    allList.push(CAList);
-    allList.push(CJList);
-    allList.push(GPList);
-
+    var regList = existingNamesAlready || [];
+    
+    
+    
+//it filters based on the town 
     function number(code){
+        var allList =[];
         var i;
         for (i = 0; i < regList.length; i++) {
-          if(regList[i].includes(code) && !CAList.includes(regList[i])){
-            CAList.push(regList[i])  
+          if(regList[i].includes(code) && !allList.includes(regList[i])){
+            allList.push(regList[i])  
             //return regList[i];
+          }else if(code == 'ShowAll'){
+              return regList;
           }
-        }return CAList;
+        }return allList;
+        
     }
     function setReg(regNumber) {
         
-        if (!regList.includes(regNumber)) {
-            regList.push(regNumber);
+        if (!regList.includes(regNumber.toUpperCase()) && regNumber!="") {
+            regList.push(regNumber.toUpperCase());
         } else {
             return;
 
