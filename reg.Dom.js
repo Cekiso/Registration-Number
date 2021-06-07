@@ -10,17 +10,18 @@ var regMsg = document.querySelector(".message");
 
 
 
-var Reginstance = Reg()
+var Reginstance = Reg();
 
-function regNumber(){
-    var addButton = document.querySelector("input[name='place']:checked");
-    
+function regNumber() {
+    //var addButton = document.querySelector("input[name='place']:checked");
+    var addButton = document.createElement("BUTTON");
     if (addButton) {
         Reginstance.setReg(RegNo.value);
         regMsg.innerHTML = Reginstance.number(addButton.value)
-        
+            // document.body.appendChild(addButton);
+            //console.log(number)
     }
-    
-    
+
+
 }
 Regbutton.addEventListener("click", regNumber);
