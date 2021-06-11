@@ -20,6 +20,7 @@ function Reg(existingNamesAlready) {
 
     }
 
+
     //a function where by i set my RegNo in the input field
     function setReg(regNumber) {
 
@@ -37,9 +38,11 @@ function Reg(existingNamesAlready) {
         return regList;
 
     }
+
     return {
         number,
         setReg,
         Names
+
     }
 }
