@@ -20,14 +20,21 @@ function Reg(existingNamesAlready) {
 
     }
 
+
+
+
     //a function where by i set my RegNo in the input field
     function setReg(regNumber) {
+        if (/^((CA|CJ|GP)\ ([0-9]){3}\ ([0-9]){3})$/.test(regNumber.toUpperCase()) || /^((CA|CJ|GP)\ ([0-9]){6})$/.test(regNumber.toUpperCase()) || /^((CA|CJ|GP)\ ([0-9]){5})$/.test(regNumber.toUpperCase())) {
+            if (!regList.includes(regNumber.toUpperCase()) && regNumber != "") {
+                regList.push(regNumber.toUpperCase());
+            } else {
+                return
+            }
 
-        if (!regList.includes(regNumber.toUpperCase()) && regNumber != "") {
-            regList.push(regNumber.toUpperCase());
+
         } else {
-            return;
-
+            return "invalid"
         }
 
     }
@@ -37,9 +44,11 @@ function Reg(existingNamesAlready) {
         return regList;
 
     }
+
     return {
         number,
         setReg,
         Names
+
     }
 }
