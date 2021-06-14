@@ -48,12 +48,14 @@ myFunction(test)
 
 function regNumber() {
     //var addButton = document.querySelector("input[name='place']:checked");
+
     var addButton = document.createElement("BUTTON");
 
     if (addButton) {
 
+
         Reginstance.setReg(RegNo.value);
-        regError.innerHTML = Reginstance.setReg(RegNo.value);
+        regError.innerHTML = Reginstance.error(RegNo.value);
         localStorage['regNo'] = JSON.stringify(Reginstance.Names(RegNo.value, Regbutton.value));
         var test = Reginstance.Names(RegNo.value)
 
@@ -63,7 +65,12 @@ function regNumber() {
 
     }
     RegNo.value = "";
+    setTimeout(function() {
+        regError.innerHTML = '';
+    }, 3000);
 }
+
+
 
 
 //gonna pull/ show the RegNo that are added

@@ -77,3 +77,7 @@ li {
     font-size: 20px;
     justify-content: space-around;
 }
+
+.errors {
+    color: rgb(114, 13, 13);
+}
