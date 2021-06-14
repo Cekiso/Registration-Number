@@ -1,36 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/plate.jpeg">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
 </head>
 
 <body>
-    <h1>Registration Numbers</h1>
-    <div class="errors"></div>
-    <label for="">Reg Numbers</label>
-    <input type="text" placeholder="CA XXX XXX" class="regNo">
-    <button type="submit" class="bttn">Add</button>
-    <div class="radio">
-        <label for="">Cape Town</label>
-        <input type="radio" class="town" name="place" value="CA">
-        <label for="">Paarl</label>
-        <input type="radio" class="town" name="place" value="CJ">
-        <label for="">Gauteng</label>
-        <input type="radio" class="town" name="place" value="GP">
-        <label for="">Show All</label>
-        <input type="radio" class="ShowAll" name="place" value="ShowAll">
-    </div><br>
-    <div class="message" id="lists">
-        <ul></ul>
-    </div>
+    <div id="mocha"></div>
+    <script>
+        mocha.setup('bdd');
+        var assert = chai.assert;
+    </script>
+    <script src="tests/RegTests.js"></script>
+
+    <script src="reg/reg.js"></script>
+
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
 </body>
-<script src="reg.js"></script>
-<script src="reg.Dom.js"></script>
 
 </html>

@@ -37,25 +37,25 @@ describe('Registration Number', function() {
             let registration = Reg();
 
 
-            assert.equal(registration.error(""), 'please enter a valid reg e.g CA XXX XXX');
+            assert.equal(registration.error(""), 'Please enter a valid registration number e.g CA XXX XXX');
         });
-        it('should be able to return an error message for number', function() {
+        it('should be able to return an error message for numbers', function() {
             let registration = Reg();
 
 
-            assert.equal(registration.error("4587453"), 'please enter a valid reg e.g CA XXX XXX');
+            assert.equal(registration.error("4587453"), 'Please enter a valid registration number e.g CA XXX XXX');
         });
         it('should be able to return an error message for two registration numbers', function() {
             let registration = Reg();
 
 
-            assert.equal(registration.error('ca 123 123 ca 678 909'), 'please enter a valid reg e.g CA XXX XXX');
+            assert.equal(registration.error('ca 123 123 ca 678 909'), 'Please enter a valid registration number e.g CA XXX XXX');
         });
         it('should be able to return an error message for town that is not nothing', function() {
             let registration = Reg();
 
 
-            assert.equal(registration.error('WC 123'), 'please enter a valid reg e.g CA XXX XXX');
+            assert.equal(registration.error('WC 123'), 'Please enter a valid registration number e.g CA XXX XXX');
         });
     });
 });
