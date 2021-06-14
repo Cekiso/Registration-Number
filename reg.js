@@ -46,7 +46,7 @@ function Reg(existingNamesAlready) {
 
             return null;
         } else {
-            return "please enter a valid reg e.g CA XXX XXX";
+            return "Please enter a valid registration number e.g CA XXX XXX";
         }
     }
 
