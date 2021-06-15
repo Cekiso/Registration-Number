@@ -57,11 +57,12 @@ describe('Registration Number', function() {
 
             assert.equal(registration.error('WC 123'), 'Please enter a valid registration number e.g CA XXX XXX');
         });
-        it('should be able to return an error message for town that is not included in the list', function() {
-            let registration = Reg();
+        it('should be able to return an error message for when there no registration numbers found while filtering ',
+            function() {
+                let registration = Reg();
 
 
-            assert.equal(registration.errorhandling(), 'No registration number added');
-        });
+                assert.equal(registration.errorhandling(), 'No registration number added');
+            });
     });
 });
