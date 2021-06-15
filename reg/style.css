@@ -77,3 +77,34 @@ li {
     font-size: 20px;
     justify-content: space-around;
 }
+
+.errors {
+    color: rgb(114, 13, 13);
+}
+
+.clearBttn {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(0, 195, 255);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px rgb(146, 145, 145);
+}
+
+.clearBttn:hover {
+    background-color: rgb(0, 195, 255)
+}
+
+.clearBttn:active {
+    background-color: rgba(255, 0, 0, 0.774);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+::placeholder {
+    color: rgb(223, 221, 221);
+}
