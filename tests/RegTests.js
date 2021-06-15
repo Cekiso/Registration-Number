@@ -45,6 +45,12 @@ describe('Registration Number', function() {
 
             assert.equal(registration.error("4587453"), 'Please enter a valid registration number e.g CA XXX XXX');
         });
+        it('should be able to return an error message for registration number that have four or less numbers', function() {
+            let registration = Reg();
+
+
+            assert.equal(registration.error("cj 1234"), 'Please enter a valid registration number e.g CA XXX XXX');
+        });
         it('should be able to return an error message for two registration numbers', function() {
             let registration = Reg();
 
